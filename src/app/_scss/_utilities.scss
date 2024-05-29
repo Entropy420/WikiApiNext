@@ -1,0 +1,7 @@
+@use "./variables" as var;
+// @use "./breakpoints" as brk;
+
+.wrapper {
+  max-width: var.$WRAPPER-WIDTH;
+  margin: 0 auto;
+}

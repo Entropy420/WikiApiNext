@@ -1,0 +1,56 @@
+@use "../../_scss/breakpoints" as brk;
+
+.nav {
+  background-color: #475569;
+  position: sticky;
+  top: 0;
+
+  &__wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__home-link {
+    color: #eaecf4;
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  &__search {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+
+    &-bar {
+      border: none;
+      border-radius: 1rem;
+      padding: 0.25rem 0.5rem;
+      width: 20rem;
+    }
+
+    &-button {
+      font-size: 1rem;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0.57rem;
+    }
+  }
+}
+
+@include brk.breakpoint-for("phone") {
+  .nav {
+    &__wrapper {
+      flex-flow: column;
+    }
+    &__search {
+      gap: 0.75rem;
+      &-bar {
+        width: 60vw;
+      }
+    }
+  }
+}
